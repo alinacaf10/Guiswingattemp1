@@ -5,8 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main {
-
     public static void main(String[] args) {
+
         JFrame frame = new JFrame();
         JButton btn = new JButton();
         JLabel label = new JLabel();
@@ -14,13 +14,14 @@ public class Main {
         label.setBounds(100, 50, 100, 30);
         btn.setText("1-0");
         btn.setBounds(100, 100, 100, 30);
-for (int x=0;x<10;x++){
+
         btn.addActionListener(new ActionListener() {
+            int i=0;
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                int i=0;
                 i++;
+
                 if (i%2==0){
                     label.setText("0000");
                 }
@@ -29,7 +30,7 @@ for (int x=0;x<10;x++){
                 }
             }
         });
-    }
+
 
         frame.setVisible(true);
         frame.setSize(400, 400);
